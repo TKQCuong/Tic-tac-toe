@@ -35,15 +35,14 @@ function App() {
   const responseFacebook = resp => {
     setCurrentUser({
       name: resp.name,
-      mail: resp.email,
+      mail: resp.email
     });
   };
-
 
   const postData = async () => {
     let data = new URLSearchParams();
     data.append("player", currentUser.name);
-    data.append("score",  -1000);
+    data.append("score", -1000);
     const response = await fetch(
       "https://ftw-highscores.herokuapp.com/tictactoe-dev/",
       {
@@ -84,9 +83,11 @@ function App() {
       ) : (
         <>
           {gameOver ? (
-            <h2 className="result">Result: <span >{winner}</span></h2>
+            <h2 className="result">
+              Result: <span>{winner}</span>
+            </h2>
           ) : (
-            <span className="result"></span>        
+            <span className="result"></span>
           )}
           <Game
             game={game}
@@ -103,11 +104,13 @@ function App() {
             <h2>Top Score</h2>
             {currentScore.map(el => (
               <li>
-                <u>{el.player}</u> <span>achieved a score of:  </span>
+                <u>{el.player}</u> <span>achieved a score of: </span>
                 <b>{el.score}</b>
               </li>
             ))}
-            {/* <button className="post-button" onClick={() => postData()}>POST</button> */}
+            <button className="post-button" onClick={() => postData()}>
+              POST
+            </button>
           </div>
         </>
       )}
