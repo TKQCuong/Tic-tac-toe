@@ -1,22 +1,148 @@
-.App {
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 40px;
+  background: #26a69a;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.square {
+  color: #424242;
+  background: #26a69a;
+  border: 4px solid #00897b;
+  float: left;
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 136px;
+  height: 136px;
+  margin-right: 0px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 136px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 411px;
+  width: 513px;
+  padding-left: 30%;
+  padding-top: 3%;
+}
+
+.game-info {
+  font-size: 48px;
+  color: #424242;
+  margin-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.restart-button {
+  margin-top: 100px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.restart:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.restart:focus {
+  outline: none;
+}
+
+.restart:active {
+  box-shadow: 0 1px #424242;
+  transform: translateY(1px);
+}
+
+.restart {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  background-color: #424242;
+  color: #fffde7;
+  border: none;
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  width: 36.5%;
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 33.5%;
+}
+
+.result {
+  padding-left: 44%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 32px;
+  letter-spacing: 1.4px;
+  word-spacing: 2px;
   color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #09d3ac;
+.top-score {
+  margin-left: 25%;
+  text-align: center;
+  border: 5px grey;
+  border-style: dotted solid dotted solid;
+  margin-right: 25%;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.post-button {
+  box-shadow:inset 0px 1px 0px 0px #a6827e;
+	background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+	background-color:#7d5d3b;
+	border-radius:3px;
+	border:1px solid #54381e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+  font-size:13px;
+  font-weight: 700;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d3534;
+}
+.post-button:hover {
+	background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+	background-color:#634b30;
+}
+.post-button:active {
+	position:relative;
+	top:1px;
 }
